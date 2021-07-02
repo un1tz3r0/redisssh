@@ -14,12 +14,26 @@ RedisSSHConnectionPool can work in one of two ways:
 1. Non-shared, where each redis connection has it's own SSH client connection with a single
 forwarded channel. To use this behavior, pass the constructor keyword argument ssh_shared=False
 
-    # <code example>
+    code example
 
 2. Shared, where there is a single SSH client connection for the ConnectionPool instance, and 
 the connections in the pool are multiplexed each on it's own channel.
 
-    # <code example>
+    code example
 
 Which of these is right for you depends on a number of factors, and on how your application 
 makes use of redis.
+
+## TO-DO
+
+- port to asyncio, as it is the future, and the future is now
+- is there an asyncio pure python ssh implementation comparable to paramiko? (look into this further)
+
+# TO-DO (someday when I run out of more exciting stuff to work on)
+
+- docs
+- tests
+- profit
+
+=====
+                       cheers - V
